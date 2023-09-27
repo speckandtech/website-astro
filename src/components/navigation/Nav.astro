@@ -1,0 +1,14 @@
+---
+import { SITE_TITLE } from "../../consts";
+import NavLinks from "../navigation/NavLinks.astro";
+import NavSocials from "../navigation/NavSocials.astro";
+---
+
+<nav class="flex justify-center">
+  <div class="py-3 px-10 md:container md:mx-auto flex items-center justify-between">
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+
+    <NavLinks />
+    <NavSocials />
+  </div>
+</nav>
