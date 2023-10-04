@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a">;
+const { href } = Astro.props,
+	{ pathname } = Astro.url,
+	twClasses = "mx-4 hover:text-accent focus:text-accent focus:outline-none",
+	isActive = href === pathname || href === pathname.replace(/\/$/, "");
+---
+
+<a
+	href={href}
+	class:list={[twClasses, { "underline font-semibold text-accent": isActive }]}
+>
+	<slot />
+</a>

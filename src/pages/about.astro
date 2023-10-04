@@ -1,72 +1,103 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import Page from '../layouts/Page.astro';
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
-  heroImage="/blog-placeholder-about.jpg"
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-    integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis
-    egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In
-    hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat.
-    Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu
-    non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim.
-    Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed
-    vulputate mi. Dictumst quisque sagittis purus sit amet.
-  </p>
+<Page>
 
-  <p>
-    Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-    rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus
-    sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris
-    rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus
-    dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-    massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius
-    morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras
-    ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est
-    ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa
-    ultricies mi.
-  </p>
+  <main>
 
-  <p>
-    Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque.
-    Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac
-    felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit
-    amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed
-    elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-    dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra.
-    Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum
-    consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus
-    ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-    facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed
-    risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor
-    vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus
-    non. Amet dictum sit amet justo donec enim.
-  </p>
+    <figure class="mb-10">
+      <img src="/public/images/about.webp" class="" alt="S&T Group Picture" />
+      <figcaptio class="text-sm">
+        The Workshop Day — Photo by <a href="https://www.instagram.com/edomenegaz/" target="_blank">Edoardo</a>
+      </figcaptio>
+    </figure>
+  
+    <p class="mb-5">
+      Speck&Tech is the digital community of Trentino. Founded on March
+      1st, 2016 by a group of youngsters, who some people would define
+      nerds or geeks, it was then officially registered as an
+      <b>“Associazione Culturale”</b> on April 18th, 2017. Since its
+      birth, Speck&Tech has always had an ambitious and precise goal (as
+      one can still read in the motto on the homepage), that is to create
+      a <b>community</b> of people, even very different from each other,
+      united by a <b>passion for technology and innovation</b>, who want
+      to exchange ideas and knowledge about these and related topics.
+    </p>
+  
+    <p>
+      How? Mainly through <b>monthly events</b> - over 50 in recent years,
+      <a href="https://speckand.tech/events/"
+        >you can find them all here</a
+      >
+      - which resemble the typical meetups of large American and European
+      cities: <b>two talks of about half an hour</b> on the same theme,
+      generally in English, followed by 5 minutes of Q&A. A more technical
+      presentation, a more divulgative one; or maybe a more
+      “developer-like” and a more entrepreneurial one, or a scientific and
+      a philosophical one. This is then followed by a convivial part of
+      <b>networking</b>, where the participants discuss together with the
+      speakers and the other <i>Speckers</i>, eat <b>speck</b> (the famous
+      local cold cuts) and drink a few beers.
+    </p>
+  
+    <iframe
+      width="100%" height="315" class="mt-10 mb-10"
+      src="https://www.youtube.com/embed/PRhpeAC46As" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    ></iframe>
+  
+    <p class="mb-5">
+      Along these years, the Association's initiatives have been many:
+      from simple "itinerant" Speck&Tech (in Piazza Duomo at
+      <a href="/2018/04/future-cities/">#TSCW18</a>, in Munich, at the
+      Caproni Airport during
+      <a href="https://speckand.tech/2018/09/ibelievespeckcanfly/"
+        >Festivolare</a
+      >, at the UniTrento CLab...), to various collaborations with
+      interational players and local authorities (the triptych of events
+      <a
+        href="https://speckand.tech/2019/03/mn-guida-galattica-per-specker/"
+        >MUSE::Next</a
+      >
+      organized with the Museum of Science, which registered over 300
+      participants in its first night, is memorable); from the
+      <a href="https://speckand.tech/2017/10/hack-developers/"
+        >Hackathon</a
+      >
+      co-organized with the <b>Government's Digital Team</b> in 2017 to
+      the renowned
+      <a href="https://speckand.tech/retreat"
+        >Speck&Tech Retreat</a
+      >, the weekend in the mountains where outdoor activities in the
+      <b>Dolomites</b> are combined with Trentino gourmet food, career
+      fairs, relaxation in the spa, talks and technical workshops.
+    </p>
+  
+    <p class="mb-5">
+      Towards the end of 2020, both to keep our audience engaged and to
+      explore new horizons, Speck&Tech also launched a
+      <a href="https://anchor.fm/speckandtech/">podcast</a>: it was an
+      experiment, which received good feedback and helped the Association
+      overcome the challenging period of the Covid-19 pandemic. From
+      October 2021, after over a year and a half without events in
+      attendance and thanks to the entry of fresh forces into the
+      Association and the contribution of <b>new volunteers</b> (to date
+      there are about 15 members), Speck&Tech has returned to organize its
+      <b>monthly meetups</b> at Impact Hub Trentino, as well as a series
+      of new initiatives, such as Speck&Trek.
+    </p>
+  
+    <p>
+      Would you like to help the Association?
+      <a href="mailto:speckandtech@gmail.com">Write to us!</a>
+    </p>
 
-  <p>
-    Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac
-    ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem
-    viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu
-    ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac
-    tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-    pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim
-    sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam.
-    Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
-  </p>
+    <p>
+      Do you want to support Speck&Tech?
+      <a href="https://speckand.tech/support-us">Here is how</a>.
+    </p>
 
-  <p>
-    Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-    imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-    cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.
-    Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit
-    libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed
-    pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique
-    magna.
-  </p>
-</Layout>
+  </main>
+
+</Page>
