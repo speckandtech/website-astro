@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   // site: "https://speckand.tech",
   site: 'https://speckandtech.github.io',
-  base: '/website-astro',
+  base: '/',
   integrations: [mdx(), sitemap(), tailwind()],
 });
