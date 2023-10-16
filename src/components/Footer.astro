@@ -1,5 +1,49 @@
 ---
-// const today = new Date();
+import NavSocials from './navigation/NavSocials.astro'
+import { getCollection } from "astro:content";
+
+const events = (await getCollection("events")).sort(
+    (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+  ).reverse().slice(0, 3);
 ---
 
-<footer></footer>
+<footer class="flex flex-col justify-center py-10">
+
+  <div class="row flex justify-center">
+
+    <div class="w-2/6 flex flex-col text-sm">
+      <span class="font-medium">Associazione culturale Speck&Tech</span>
+      <span>C.F. 96106760224</span>
+      <span>P.IVA IT02467530222</span>
+      <span>IBAN IT31I0830401864000064406608</span>
+    </div>
+
+    <div class="w-2/6 flex text-sm">
+
+      <div class="row flex flex-col flex-grow justify-start">
+        <span class="font-medium">Pages</span>
+        <span><a href="/about">About</a></span>
+        <span><a href="/support-us">Support Us</a></span>
+        <span><a href="/retreat-v4">Retreat v4</a></span>
+      </div>
+
+      <div class="row flex flex-col flex-grow justify-start">
+        <span class="font-medium">Last Events</span>
+        {events.map(event => <span><a href={event.slug}>{event.data.title.substring(1)}</a></span>)}
+      </div>
+
+      <div class="row flex flex-col flex-grow justify-start">
+        <span class="font-medium">Info</span>
+        <a href="/code-of-conduct">Code of Conduct</a>
+        <a href="/report-an-error">Report an Error</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row flex justify-center mt-12">
+    <NavSocials />
+  </div>
+
+</footer>

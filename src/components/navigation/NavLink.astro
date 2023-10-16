@@ -10,7 +10,7 @@ const { href } = Astro.props,
 
 <a
 	href={href}
-	class:list={[twClasses, { "underline font-semibold text-accent": isActive }]}
+	class:list={[twClasses, { "font-semibold text-accent": isActive }]}
 >
 	<slot />
 </a>

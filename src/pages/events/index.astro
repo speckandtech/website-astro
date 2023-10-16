@@ -12,18 +12,25 @@ const events = (await getCollection("events")).sort(
 <Page>
   <main>
     <section event-list>
+
+      <p class="mb-12">
+        Here's the list of most events organized by Speck&Tech since 2016! You can find all the talks, their abstracts, 
+        information about the speakers, slides (when available) and links to video recordings and photo albums.
+      </p>
+
       <ul class="list-none">
         {
           events.map((post) => (
             <li class="mb-10 group/item">
               <a href={`/events/${post.slug}/`}>
                 <FormattedDate classAtt="text-base text-gray-400" date={post.data.date} />
-                <h3 class="text-accent text-2xl font-semibold">{post.data.title}</h3>
+                <h3 class="text-accent text-2xl font-medium">{post.data.title}</h3>
               </a>
             </li>
           ))
         }
       </ul>
+
     </section>
   </main>
 </Page>
