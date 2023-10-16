@@ -3,10 +3,11 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import Nav from "../components/navigation/Nav.astro";
 
 type Props = CollectionEntry<"events">["data"];
 
-const {title, date} = Astro.props;
+const { title, date } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,34 +16,18 @@ const {title, date} = Astro.props;
   </head>
 
   <body>
-    <main>
-      <article>
-        <div class="hero-image">
-          <!-- { -->
-          <!--   heroImage && ( -->
-          <!--     <img width={1020} height={510} src={heroImage} alt="" /> -->
-          <!--   ) -->
-          <!-- } -->
-        </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={date} />
-              <!-- { -->
-              <!--   updatedDate && ( -->
-              <!--     <div class="last-updated-on"> -->
-              <!--       Last updated on <FormattedDate date={updatedDate} /> -->
-              <!--     </div> -->
-              <!--   ) -->
-              <!-- } -->
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          <slot />
-        </div>
-      </article>
+    <Nav />
+
+    <main class="mx-auto max-w-screen-lg">
+      <div class="py-12">
+        <FormattedDate date={date} />
+        <h1 class="text-6xl font-semibold mt-6">{title}</h1>
+      </div>
+      <div class="prose lg:prose-xl">
+        <slot />
+      </div>
     </main>
+
     <Footer />
   </body>
 </html>
