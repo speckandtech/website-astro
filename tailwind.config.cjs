@@ -6,9 +6,9 @@ module.exports = {
     colors: {
       transparent: "transparent",
       accent: "#e7424f", // rgb(231, 66, 79)
-      accentDark: "#b9353f"
+      accentDark: "#b9353f",
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
