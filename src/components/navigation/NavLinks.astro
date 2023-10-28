@@ -1,10 +1,17 @@
 ---
 import NavLink from "./NavLink.astro";
+import NavSocials from "./NavSocials.astro";
 ---
 
-<div>
+<div
+  class="bg-white grid grid-cols-1 gap-8 text-center border-t border-b py-8 mt-4
+  lg:bg-transparent lg:flex lg:text-left lg:py-0 lg:border-t-0 lg:border-b-0"
+>
   <NavLink href="/">Home</NavLink>
   <NavLink href="/events">Events</NavLink>
   <NavLink href="/about">About</NavLink>
   <NavLink href="/jobs">Jobs</NavLink>
+  <div class="flex justify-center lg:hidden">
+    <NavSocials />
+  </div>
 </div>

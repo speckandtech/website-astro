@@ -2,37 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Neo Sans;
-  font-weight: 900;
-  src: url("/_assets/fonts/NeoSansStd-Black.otf") format("opentype");
-  ascent-override: 90%;
-}
+@layer base {
+  @font-face {
+    font-family: Neo Sans;
+    font-weight: 900;
+    src: url("/_assets/fonts/NeoSansStd-Black.otf") format("opentype");
+    ascent-override: 90%;
+  }
 
-@font-face {
-  font-family: Neo Sans;
-  font-weight: bold;
-  src: url("/fonts/NeoSansStd-Bold.otf") format("opentype");
-  ascent-override: 90%;
-}
+  @font-face {
+    font-family: Neo Sans;
+    font-weight: bold;
+    src: url("/fonts/NeoSansStd-Bold.otf") format("opentype");
+    ascent-override: 90%;
+  }
 
-@font-face {
-  font-family: Neo Sans;
-  font-weight: 500;
-  src: url("/fonts/NeoSansStd-Medium.otf") format("opentype");
-  ascent-override: 90%;
-}
+  @font-face {
+    font-family: Neo Sans;
+    font-weight: 500;
+    src: url("/fonts/NeoSansStd-Medium.otf") format("opentype");
+    ascent-override: 90%;
+  }
 
-@font-face {
-  font-family: Neo Sans;
-  font-weight: 400;
-  src: url("/fonts/NeoSansStd-Regular.otf") format("opentype");
-  ascent-override: 90%;
-}
+  @font-face {
+    font-family: Neo Sans;
+    font-weight: 400;
+    src: url("/fonts/NeoSansStd-Regular.otf") format("opentype");
+    ascent-override: 90%;
+  }
 
-@font-face {
-  font-family: Neo Sans;
-  font-weight: 200;
-  src: url("/fonts/NeoSansStd-Ultra.otf") format("opentype");
-  ascent-override: 90%;
+  @font-face {
+    font-family: Neo Sans;
+    font-weight: 200;
+    src: url("/fonts/NeoSansStd-Ultra.otf") format("opentype");
+    ascent-override: 90%;
+  }
+
+  a {
+    @apply hover:underline hover:text-accent;
+  }
 }
