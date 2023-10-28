@@ -1,32 +1,31 @@
 ---
-import Page from '../layouts/Page.astro';
-import Header from "../components/homepage/Header.astro";
+import Page from "../layouts/Page.astro";
 import PreviousEvents from "../components/homepage/PreviousEvents.astro";
 import JobOpenings from "../components/homepage/JobOpenings.astro";
 ---
 
 <Page>
-
-  <Header />
-
-  <main>
+  <main class="max-w-screen-xl mx-auto mt-24">
     <p class="text-4xl leading-normal relative">
-      A community of <b>entrepreneurs</b>, <b>developers</b>, <b>designers</b>, 
-      <b>professionals</b> and... anyone who wants to build a network of tech 
-      enthusiasts within the <b>Trento area</b>, with the purpose of learning 
-      and sharing new ideas regarding development, design, entrepreneurship, 
+      A community of <b>entrepreneurs</b>, <b>developers</b>, <b>designers</b>,
+      <b>professionals</b> and... anyone who wants to build a network of tech
+      enthusiasts within the <b>Trento area</b>, with the purpose of learning
+      and sharing new ideas regarding development, design, entrepreneurship,
       startups and any related topic.
-      <img src="/images/piggy_specker.png" width="250" class="absolute -bottom-[140px] -right-[100px] rotate-[12deg]">
+      <img
+        src="/images/piggy_specker.png"
+        width="250"
+        class="absolute -bottom-[220px] -right-[40px] rotate-[12deg]"
+      />
     </p>
 
     <p class="text-3xl mt-[80px] mb-[150px] font-medium">
-      Do you want to be our next speaker?<br>
+      Do you want to be our next speaker?<br />
       <a class="text-accent" href="mailto:hello@speckand.tech">Contact us!</a>
     </p>
 
     <PreviousEvents />
+
     <JobOpenings />
-
   </main>
-
 </Page>

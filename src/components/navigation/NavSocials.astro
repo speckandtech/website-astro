@@ -1,13 +1,18 @@
 ---
+import { SOCIALS } from "../../consts";
 import GitHubLogo from "../logos/GitHubLogo.astro";
+import InstagramLogo from "../logos/InstagramLogo.astro";
 import TwitterLogo from "../logos/TwitterLogo.astro";
 ---
 
 <div class="flex items-center space-x-4">
-  <a href="https://twitter.com/" target="_blank">
+  <a href={SOCIALS.instagram.url} target="_blank">
+    <InstagramLogo />
+  </a>
+  <a href={SOCIALS.twitter.url} target="_blank">
     <TwitterLogo />
   </a>
-  <a href="https://github.com/withastro/astro" target="_blank">
+  <a href={SOCIALS.github.url} target="_blank">
     <GitHubLogo />
   </a>
 </div>

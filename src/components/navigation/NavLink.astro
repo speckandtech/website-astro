@@ -3,14 +3,14 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a">;
 const { href } = Astro.props,
-	{ pathname } = Astro.url,
-	twClasses = "mx-4 hover:text-accent focus:text-accent focus:outline-none",
-	isActive = href === pathname || href === pathname.replace(/\/$/, "");
+  { pathname } = Astro.url,
+  twClasses = "mx-4 hover:text-accent focus:text-accent focus:outline-none",
+  isActive = href === pathname || href === pathname.replace(/\/$/, "");
 ---
 
 <a
-	href={href}
-	class:list={[twClasses, { "font-semibold text-accent": isActive }]}
+  href={href}
+  class:list={[twClasses, { "font-semibold text-accent": isActive }]}
 >
-	<slot />
+  <slot />
 </a>

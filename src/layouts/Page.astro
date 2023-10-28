@@ -2,11 +2,13 @@
 import BaseHead from "../components/BaseHead.astro";
 import Nav from "../components/navigation/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/homepage/Header.astro";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+const currentPath = Astro.url.pathname;
 ---
 
 <html lang="en">
-
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -14,9 +16,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Nav />
 
-    <slot />
+    {currentPath === "/" ? <Header /> : null}
+
+    <main class="max-w-screen-lg mx-auto">
+      <slot />
+    </main>
 
     <Footer />
   </body>
-
 </html>
